@@ -11,7 +11,7 @@
 
 .info-card {
   background-color: transparent;
-  width: 50vh;
+  width: 30vw;
   height: 50vh;
   margin: 0 0.25rem;
   border: 1px solid white;
@@ -52,5 +52,15 @@
 @media (prefers-color-scheme: light) {
   .info-card {
     border: 1px solid black;
+  }
+}
+
+@media (max-width: 500px) {
+  .infocards {
+    display: grid;
+  }
+  .info-card {
+    width: 80vw;
+    margin: 0.25rem;
   }
 }

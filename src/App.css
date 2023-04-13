@@ -3,7 +3,6 @@
 :root {
   color-scheme: light dark;
   accent-color: slateblue;
-  /* --order: 10; */
 }
 
 .App {
@@ -13,7 +12,6 @@
 body {
   margin: 0;
   padding: 0;
-  /* font-family: Arial, Helvetica, sans-serif; */
   font-family: "Roboto", sans-serif;
 }
 
@@ -37,11 +35,17 @@ body {
   justify-content: flex-end;
   position: fixed;
   z-index: 999;
+  border-bottom: 1px solid white;
 }
 
 .navbar .links {
   text-align: center;
   margin-right: 50px;
+}
+
+.navbar.sticky .links a {
+  color: white;
+  border-bottom: 3px solid white;
 }
 
 .links a {
@@ -96,7 +100,21 @@ section.pdfViewer {
 
 iframe {
   height: 100vh;
-  width: 100vh;
+  width: 80vw;
+}
+
+@media (prefers-color-scheme: light) {
+  html {
+    background-color: aliceblue;
+    color: black;
+  }
+  .links a {
+    color: black;
+    border-bottom: 3px solid black;
+  }
+  .navbar.sticky {
+    border-bottom: 1px solid black;
+  }
 }
 
 @media (prefers-reduced-motion) {
@@ -129,5 +147,10 @@ iframe {
 
   section.logo {
     min-height: 30vh;
+  }
+
+  iframe {
+    height: 60vh;
+    width: 100vw;
   }
 }
