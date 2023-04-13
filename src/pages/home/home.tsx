@@ -24,7 +24,7 @@ export interface ImageSectionInterface {
   order: number;
 }
 
-export const About = () => {
+export const Home = () => {
   let cardCounter = 0;
   let frameworkCounter = 0;
 

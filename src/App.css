@@ -51,58 +51,6 @@ body {
   margin: 10px;
 }
 
-.navbar .user {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 50px;
-}
-
-.user p {
-  font-size: 15px;
-  margin-right: 10px;
-  color: white;
-}
-
-.user img {
-  font-size: 15px;
-  border-radius: 50%;
-}
-
-.create-post {
-  width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: center;
-}
-
-form {
-  margin-top: 50px;
-  padding: 30px 20px;
-  width: 320px;
-  border-radius: 7px;
-  /* background-color: white; */
-  backdrop-filter: blur(5px);
-  background-color: rgba(43, 0, 255, 0.588);
-  overflow: hidden;
-}
-
-input,
-textarea {
-  font-family: "Nunito", sans-serif;
-  padding: 8px 10px;
-  margin: 3px 8px 16px 8px;
-  background-color: rgba(222, 239, 248, 0.877);
-  border: 0px transparent;
-  color: rgb(97, 4, 184);
-  font-size: 16px;
-  z-index: 1;
-}
-
-.submitform:hover {
-  cursor: pointer;
-}
-
 section {
   display: grid;
   place-items: center;
@@ -136,6 +84,19 @@ section {
 
 .logo.show {
   transform: translateX(0);
+}
+
+section.pdfViewer {
+  min-height: 50vh;
+}
+
+.downloadLink {
+  margin-top: 5em;
+}
+
+iframe {
+  height: 100vh;
+  width: 100vh;
 }
 
 @media (prefers-reduced-motion) {
