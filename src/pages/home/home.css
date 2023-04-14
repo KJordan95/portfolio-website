@@ -49,6 +49,23 @@
   overflow-y: auto;
 }
 
+/* scroll bar for info cards description, not supported in firefox or edge prior 97*/
+.info-card-back::-webkit-scrollbar {
+  width: 10px;
+}
+
+.info-card-back::-webkit-scrollbar-track {
+  background: #dbdbdb;
+}
+
+.info-card-back::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+.info-card-back::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 @media (prefers-color-scheme: light) {
   .info-card {
     border: 1px solid black;

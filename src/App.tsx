@@ -1,8 +1,13 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 import { NavBar } from "./components/navbar";
 import { Home } from "./pages/home/home";
 import "./App.css";
-import { Resume } from "./pages/resume/resume";
+import { Resume } from "./pages/resume";
 
 function App() {
   return (
@@ -12,6 +17,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/resume" element={<Resume />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </Router>
     </div>
