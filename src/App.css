@@ -3,7 +3,6 @@
 :root {
   color-scheme: light dark;
   accent-color: slateblue;
-  /* --order: 10; */
 }
 
 .App {
@@ -13,7 +12,6 @@
 body {
   margin: 0;
   padding: 0;
-  /* font-family: Arial, Helvetica, sans-serif; */
   font-family: "Roboto", sans-serif;
 }
 
@@ -37,6 +35,7 @@ body {
   justify-content: flex-end;
   position: fixed;
   z-index: 999;
+  border-bottom: 1px solid white;
 }
 
 .navbar .links {
@@ -44,63 +43,16 @@ body {
   margin-right: 50px;
 }
 
+.navbar.sticky .links a {
+  color: white;
+  border-bottom: 3px solid white;
+}
+
 .links a {
   color: white;
   text-decoration: none;
   border-bottom: 3px solid white;
   margin: 10px;
-}
-
-.navbar .user {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 50px;
-}
-
-.user p {
-  font-size: 15px;
-  margin-right: 10px;
-  color: white;
-}
-
-.user img {
-  font-size: 15px;
-  border-radius: 50%;
-}
-
-.create-post {
-  width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: center;
-}
-
-form {
-  margin-top: 50px;
-  padding: 30px 20px;
-  width: 320px;
-  border-radius: 7px;
-  /* background-color: white; */
-  backdrop-filter: blur(5px);
-  background-color: rgba(43, 0, 255, 0.588);
-  overflow: hidden;
-}
-
-input,
-textarea {
-  font-family: "Nunito", sans-serif;
-  padding: 8px 10px;
-  margin: 3px 8px 16px 8px;
-  background-color: rgba(222, 239, 248, 0.877);
-  border: 0px transparent;
-  color: rgb(97, 4, 184);
-  font-size: 16px;
-  z-index: 1;
-}
-
-.submitform:hover {
-  cursor: pointer;
 }
 
 section {
@@ -138,6 +90,33 @@ section {
   transform: translateX(0);
 }
 
+section.pdfViewer {
+  min-height: 50vh;
+}
+
+.downloadLink {
+  margin-top: 5em;
+}
+
+iframe {
+  height: 100vh;
+  width: 80vw;
+}
+
+@media (prefers-color-scheme: light) {
+  html {
+    background-color: aliceblue;
+    color: black;
+  }
+  .links a {
+    color: black;
+    border-bottom: 3px solid black;
+  }
+  .navbar.sticky {
+    border-bottom: 1px solid black;
+  }
+}
+
 @media (prefers-reduced-motion) {
   .hidden {
     transition: none;
@@ -168,5 +147,10 @@ section {
 
   section.logo {
     min-height: 30vh;
+  }
+
+  iframe {
+    height: 60vh;
+    width: 100vw;
   }
 }

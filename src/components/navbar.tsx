@@ -18,6 +18,7 @@ export const NavBar = () => {
     <div className={collapseNavBar ? "navbar sticky" : "navbar"}>
       <div className="links">
         <Link to="/">Home</Link>
+        <Link to="/resume">Resume</Link>
       </div>
     </div>
   );

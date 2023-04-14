@@ -11,7 +11,7 @@
 
 .info-card {
   background-color: transparent;
-  width: 50vh;
+  width: 30vw;
   height: 50vh;
   margin: 0 0.25rem;
   border: 1px solid white;
@@ -49,8 +49,35 @@
   overflow-y: auto;
 }
 
+/* scroll bar for info cards description, not supported in firefox or edge prior 97*/
+.info-card-back::-webkit-scrollbar {
+  width: 10px;
+}
+
+.info-card-back::-webkit-scrollbar-track {
+  background: #dbdbdb;
+}
+
+.info-card-back::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+.info-card-back::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 @media (prefers-color-scheme: light) {
   .info-card {
     border: 1px solid black;
+  }
+}
+
+@media (max-width: 500px) {
+  .infocards {
+    display: grid;
+  }
+  .info-card {
+    width: 80vw;
+    margin: 0.25rem;
   }
 }
