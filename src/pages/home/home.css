@@ -66,6 +66,38 @@
   background: #555;
 }
 
+.experiences {
+  /* background-color: rgb(53, 42, 126); */
+  display: flex;
+}
+
+.company {
+  position: relative;
+  width: max-content;
+}
+
+.company-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 30px;
+  background-color: transparent;
+  color: var(--accent-color);
+  text-align: left;
+  border-left: 2px solid darkgray;
+}
+
+.company-button[aria-selected="true"] {
+  border-left-color: red;
+}
+
+.experience-description {
+  position: relative;
+  width: 100%;
+  margin-left: 20px;
+}
+
 @media (prefers-color-scheme: light) {
   .info-card {
     border: 1px solid black;

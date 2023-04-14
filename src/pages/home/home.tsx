@@ -9,6 +9,8 @@ import {
   CppDescription,
 } from "../../assets/text/language-desrciptions";
 import "./home.css";
+import { ExperienceSection } from "./experience-section";
+import React from "react";
 
 export interface TextSectionInterface {
   title: string;
@@ -24,6 +26,19 @@ export interface ImageSectionInterface {
   order: number;
 }
 
+export interface TabNavItemInterface {
+  id: string;
+  title: string;
+  activeTab: string;
+  setActiveTab: (id: string) => void;
+}
+
+export interface TabContentInterface {
+  id: string;
+  activeTab: string;
+  children: React.ReactNode;
+}
+
 export const Home = () => {
   let cardCounter = 0;
   let frameworkCounter = 0;
@@ -31,6 +46,9 @@ export const Home = () => {
   return (
     <div>
       <TextSection title="Test" body="This is a test" />
+      {/* <section> */}
+      <ExperienceSection></ExperienceSection>
+      {/* </section> */}
       <TextSection title="Test2" body="This is a test" />
       <TextSection title="Test3" body="This is a test" />
       <TextSection title="Test4" body="This is a test" />
