@@ -66,6 +66,10 @@
   background: #555;
 }
 
+.experience-section {
+  height: max-content;
+}
+
 .experiences {
   /* background-color: rgb(53, 42, 126); */
   display: flex;
@@ -86,10 +90,11 @@
   color: var(--accent-color);
   text-align: left;
   border-left: 2px solid darkgray;
+  font-size: 1rem;
 }
 
 .company-button[aria-selected="true"] {
-  border-left-color: red;
+  border-left-color: var(--accent-color);
 }
 
 .experience-description {

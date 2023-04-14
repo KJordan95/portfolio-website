@@ -8,7 +8,12 @@ export const TabNavItem = (props: TabNavItemInterface) => {
   return (
     <button
       onClick={handleClick}
-      className={props.activeTab === props.id ? "active" : ""}
+      className={
+        props.activeTab === props.id
+          ? "company-button active"
+          : "company-button"
+      }
+      aria-selected={props.activeTab === props.id ? "true" : "false"}
     >
       {props.title}
     </button>

@@ -2,6 +2,7 @@ import { Children, useCallback, useRef, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import { TabNavItem } from "../../components/tabs/nav-item";
 import { TabContent } from "../../components/tabs/content";
+import { ExperienceDeails } from "./experience-details";
 
 export const ExperienceSection = () => {
   const [activeTab, setActiveTab] = useState("company1");
@@ -27,8 +28,8 @@ export const ExperienceSection = () => {
   );
 
   return (
-    <section className="hidden" ref={setRefs}>
-      <h2>Title</h2>
+    <section className="hidden experience-section" ref={setRefs}>
+      <h2>Work Experience</h2>
       <div className="experiences">
         <div className="company" role="tablist">
           <TabNavItem
@@ -45,7 +46,7 @@ export const ExperienceSection = () => {
           ></TabNavItem>
         </div>
         <TabContent id={"company1"} activeTab={activeTab}>
-          <p>Tab1 Works</p>
+          <ExperienceDeails />
         </TabContent>
         <TabContent id={"company2"} activeTab={activeTab}>
           <p>Tab2 Works</p>
