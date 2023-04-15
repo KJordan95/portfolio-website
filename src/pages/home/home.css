@@ -66,18 +66,10 @@
   background: #555;
 }
 
-.experience-section {
-  height: max-content;
-}
-
-.experiences {
-  /* background-color: rgb(53, 42, 126); */
-  display: flex;
-}
-
 .company {
   position: relative;
   width: max-content;
+  margin-left: 20px;
 }
 
 .company-button {
@@ -97,10 +89,55 @@
   border-left-color: var(--accent-color);
 }
 
-.experience-description {
+.experience-section {
   position: relative;
-  width: 100%;
+  padding-bottom: 10rem;
+  height: max-content;
+  align-items: center;
+}
+
+.experiences {
+  /* background-color: rgb(53, 42, 126); */
+  display: flex;
+  flex-wrap: wrap;
+  width: max-content;
+  place-items: center;
+  align-content: center;
+  /* position: relative; */
+}
+
+.experience-container {
+  position: relative;
   margin-left: 20px;
+  width: max-content;
+}
+
+.experience-description {
+  position: absolute;
+  /* margin-left: 20px; */
+  /* width: 500px; */
+  min-width: 10rem;
+  height: auto;
+  /* padding: 10px 5px; */
+}
+
+.work-details {
+  /* display: grid; */
+  /* width: 50%; */
+}
+
+.work-details-role {
+  /* width: 50%; */
+}
+
+.work-details-title {
+  /* display: grid; */
+  /* grid-template-columns: 1fr 1fr; */
+}
+
+.work-details-compamy {
+  color: var(--accent-color);
+  /* margin-left: 50px; */
 }
 
 @media (prefers-color-scheme: light) {
@@ -109,12 +146,26 @@
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 800px) {
   .infocards {
     display: grid;
   }
   .info-card {
     width: 80vw;
     margin: 0.25rem;
+  }
+
+  .company {
+    display: flex;
+    overflow-x: auto;
+  }
+
+  .company-button {
+    border-left: none;
+    border-bottom: 2px solid darkgray;
+  }
+
+  .company-button[aria-selected="true"] {
+    border-bottom-color: var(--accent-color);
   }
 }

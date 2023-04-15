@@ -1,4 +1,4 @@
-import { Children, useCallback, useRef, useState } from "react";
+import { useCallback, useRef, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import { TabNavItem } from "../../components/tabs/nav-item";
 import { TabContent } from "../../components/tabs/content";
@@ -45,50 +45,15 @@ export const ExperienceSection = () => {
             setActiveTab={setActiveTab}
           ></TabNavItem>
         </div>
-        <TabContent id={"company1"} activeTab={activeTab}>
-          <ExperienceDeails />
-        </TabContent>
-        <TabContent id={"company2"} activeTab={activeTab}>
-          <p>Tab2 Works</p>
-        </TabContent>
+        <div className="experience-container">
+          <TabContent id={"company1"} activeTab={activeTab}>
+            <ExperienceDeails />
+          </TabContent>
+          <TabContent id={"company2"} activeTab={activeTab}>
+            <p>Tab2 Works</p>
+          </TabContent>
+        </div>
       </div>
-      {/* <div className="experiences">
-        <div className="company" role="tablist">
-          <button
-            className="company-button"
-            role="tab"
-            aria-selected="false"
-            tabIndex={0}
-          >
-            Company1
-          </button>
-          <button
-            className="company-button"
-            role="tab"
-            aria-selected="false"
-            tabIndex={-1}
-          >
-            Company2
-          </button>
-          <button
-            className="company-button"
-            role="tab"
-            aria-selected="false"
-            tabIndex={-1}
-          >
-            Company3
-          </button>
-        </div>
-        <div className="experience-description" role="tabpanel" tabIndex={0}>
-          description1
-        </div>
-        <div className="experience-description" role="tabpanel" tabIndex={0}>
-          description2
-        </div>
-        <div className="experience-description" role="tabpanel" tabIndex={0}>
-          description3
-        </div>
-      </div> */}
     </section>
   );
 };

@@ -46,9 +46,7 @@ export const Home = () => {
   return (
     <div>
       <TextSection title="Test" body="This is a test" />
-      {/* <section> */}
       <ExperienceSection></ExperienceSection>
-      {/* </section> */}
       <TextSection title="Test2" body="This is a test" />
       <TextSection title="Test3" body="This is a test" />
       <TextSection title="Test4" body="This is a test" />
