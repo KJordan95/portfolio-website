@@ -133,6 +133,10 @@
   color: var(--accent-color);
 }
 
+.work-details-date-range {
+  color: rgb(67, 51, 176);
+}
+
 @media (prefers-color-scheme: light) {
   .info-card {
     border: 1px solid black;
