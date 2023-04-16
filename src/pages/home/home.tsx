@@ -1,15 +1,15 @@
-import { ImageSection } from "./image-section";
-import { TextSection } from "./text-section";
+import { ImageSection } from "../../components/sections/image-section";
+import { TextSection } from "../../components/sections/text-section";
 import CppLogo from "@/assets/img/Cpp-logo.svg";
 import JSLogo from "@/assets/img/JavaScript-logo.png";
 import JavaLogo from "@/assets/img/Java-logo.png";
-import { CardSection } from "./card-section";
+import { CardSection } from "../../components/sections/card-section";
 import {
   JavaScriptDescription,
   CppDescription,
 } from "@/assets/text/language-desrciptions";
 import "./home.css";
-import { ExperienceSection } from "./experience-section";
+import { ExperienceSection } from "../../components/sections/experience-section";
 
 export const Home = () => {
   let cardCounter = 0;

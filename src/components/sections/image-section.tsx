@@ -1,7 +1,7 @@
 import React, { useCallback, useRef } from "react";
 import { useInView } from "react-intersection-observer";
 
-interface ImageSectionInterface {
+export interface ImageSectionInterface {
   altAttributeVale: string;
   imgSrc: string;
   title: string;

@@ -1,6 +1,6 @@
 import React, { useCallback, useRef, useState } from "react";
 import { useInView } from "react-intersection-observer";
-import { ImageSectionInterface } from "./home";
+import { ImageSectionInterface } from "@/components/sections/image-section";
 
 export const CardSection = (props: ImageSectionInterface) => {
   const [flip, setFlip] = useState(false);
