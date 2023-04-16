@@ -1,11 +1,10 @@
 import { useCallback, useRef } from "react";
 import { useInView } from "react-intersection-observer";
-import { TextSectionInterface } from "./home";
 
-export const TextSection = (props: TextSectionInterface) => {
+export const IntersectionObserverReference = (thresholdView: number) => {
   const containRef = useRef();
   const { ref: inViewRef } = useInView({
-    threshold: 0.75,
+    threshold: thresholdView,
     onChange(inView, entry) {
       if (entry.isIntersecting) {
         entry.target.classList.add("show");
@@ -23,12 +22,5 @@ export const TextSection = (props: TextSectionInterface) => {
     [inViewRef]
   );
 
-  return (
-    <>
-      <section className="hidden" ref={setRefs}>
-        <h2>{props.title}</h2>
-        {props.body}
-      </section>
-    </>
-  );
+  return setRefs;
 };

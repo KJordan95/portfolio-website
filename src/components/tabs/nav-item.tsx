@@ -1,4 +1,9 @@
-import { TabNavItemInterface } from "../../pages/home/home";
+interface TabNavItemInterface {
+  id: string;
+  title: string;
+  activeTab: string;
+  setActiveTab: (id: string) => void;
+}
 
 export const TabNavItem = (props: TabNavItemInterface) => {
   const handleClick = () => {
