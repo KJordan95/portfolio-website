@@ -105,9 +105,16 @@ section.pdfViewer {
   margin-top: 5em;
 }
 
+.pdf-container {
+  overflow-y: auto;
+  overflow-x: auto;
+  resize: both;
+  position: relative;
+}
+
 iframe {
   height: 100vh;
-  width: 80vw;
+  width: 50vw;
 }
 
 @media (prefers-color-scheme: light) {
@@ -157,7 +164,7 @@ iframe {
   }
 
   iframe {
-    height: 60vh;
-    width: 100vw;
+    padding: 0 0 0 0;
+    width: 100%;
   }
 }
