@@ -92,7 +92,7 @@
 
 .experience-section {
   display: block;
-  padding: 100px 0px;
+  padding: 1rem 0px;
   max-width: 800px;
   margin: 0px auto;
 }
@@ -111,8 +111,8 @@
 .experience-description {
   width: 100%;
   height: auto;
-  overflow-wrap: break-word;
-  word-break: break-all;
+  /* overflow-wrap: break-word; */
+  /* word-break: break-all; */
 }
 
 .work-details {
@@ -178,11 +178,11 @@
     margin-left: 0rem;
   }
 
-  .experience-description {
-    max-width: 400px;
+  .work-details-title {
+    text-align: center;
   }
 
-  .work-details-title {
+  .work-details-date-range {
     text-align: center;
   }
 }

@@ -152,10 +152,6 @@ iframe {
     flex-direction: column;
   }
 
-  section {
-    min-height: 20vh;
-  }
-
   section.logo {
     min-height: 30vh;
   }

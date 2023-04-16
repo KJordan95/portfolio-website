@@ -1,34 +1,16 @@
-import { useCallback, useRef, useState } from "react";
-import { useInView } from "react-intersection-observer";
+import { useState } from "react";
 import { TabNavItem } from "@/components/tabs/nav-item";
 import { TabContent } from "@/components/tabs/content";
 import { ExperienceDeails } from "./experience-details";
+import { IntersectionObserverReference } from "./intersection-observer-reference";
 
 export const ExperienceSection = () => {
   const [activeTab, setActiveTab] = useState("company1");
 
-  const containRef = useRef();
-  const { ref: inViewRef } = useInView({
-    threshold: 0.75,
-    onChange(inView, entry) {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show");
-      } else {
-        entry.target.classList.remove("show");
-      }
-    },
-  });
-
-  const setRefs = useCallback(
-    (node: any) => {
-      containRef.current = node;
-      inViewRef(node);
-    },
-    [inViewRef]
-  );
+  const containRef = IntersectionObserverReference(0.4);
 
   return (
-    <section className="hidden experience-section" ref={setRefs}>
+    <section className="hidden experience-section" ref={containRef}>
       <h2>Work Experience</h2>
       <div className="experiences">
         <div className="company">

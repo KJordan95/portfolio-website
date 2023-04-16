@@ -1,5 +1,5 @@
-import React, { useCallback, useRef } from "react";
-import { useInView } from "react-intersection-observer";
+import React from "react";
+import { IntersectionObserverReference } from "./intersection-observer-reference";
 
 export interface ImageSectionInterface {
   altAttributeVale: string;
@@ -11,25 +11,7 @@ export interface ImageSectionInterface {
 }
 
 export const ImageSection = (props: ImageSectionInterface) => {
-  const containRef = useRef();
-  const { ref: inViewRef } = useInView({
-    threshold: 0.75,
-    onChange(inView, entry) {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show");
-      } else {
-        entry.target.classList.remove("show");
-      }
-    },
-  });
-
-  const setRefs = useCallback(
-    (node: any) => {
-      containRef.current = node;
-      inViewRef(node);
-    },
-    [inViewRef]
-  );
+  const containRef = IntersectionObserverReference(0.75);
 
   const linkStyle: React.CSSProperties = {
     "--order": props.order,
@@ -37,7 +19,7 @@ export const ImageSection = (props: ImageSectionInterface) => {
 
   return (
     <>
-      <section className="logo hidden" ref={setRefs} style={linkStyle}>
+      <section className="logo hidden" ref={containRef} style={linkStyle}>
         <img
           src={props.imgSrc}
           alt={props.altAttributeVale}
