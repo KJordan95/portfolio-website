@@ -1,7 +1,7 @@
 import { useCallback, useRef, useState } from "react";
 import { useInView } from "react-intersection-observer";
-import { TabNavItem } from "../../components/tabs/nav-item";
-import { TabContent } from "../../components/tabs/content";
+import { TabNavItem } from "@/components/tabs/nav-item";
+import { TabContent } from "@/components/tabs/content";
 import { ExperienceDeails } from "./experience-details";
 
 export const ExperienceSection = () => {
