@@ -1,4 +1,8 @@
-import { TabContentInterface } from "../../pages/home/home";
+interface TabContentInterface {
+  id: string;
+  activeTab: string;
+  children: React.ReactNode;
+}
 
 export const TabContent = (props: TabContentInterface) => {
   return props.activeTab === props.id ? (

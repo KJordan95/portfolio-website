@@ -1,43 +1,15 @@
 import { ImageSection } from "./image-section";
 import { TextSection } from "./text-section";
-import CppLogo from "../../assets/img/Cpp-logo.svg";
-import JSLogo from "../../assets/img/JavaScript-logo.png";
-import JavaLogo from "../../assets/img/Java-logo.png";
+import CppLogo from "@/assets/img/Cpp-logo.svg";
+import JSLogo from "@/assets/img/JavaScript-logo.png";
+import JavaLogo from "@/assets/img/Java-logo.png";
 import { CardSection } from "./card-section";
 import {
   JavaScriptDescription,
   CppDescription,
-} from "../../assets/text/language-desrciptions";
+} from "@/assets/text/language-desrciptions";
 import "./home.css";
 import { ExperienceSection } from "./experience-section";
-import React from "react";
-
-export interface TextSectionInterface {
-  title: string;
-  body: string;
-}
-
-export interface ImageSectionInterface {
-  altAttributeVale: string;
-  imgSrc: string;
-  title: string;
-  inlineStyle?: React.CSSProperties;
-  description?: string;
-  order: number;
-}
-
-export interface TabNavItemInterface {
-  id: string;
-  title: string;
-  activeTab: string;
-  setActiveTab: (id: string) => void;
-}
-
-export interface TabContentInterface {
-  id: string;
-  activeTab: string;
-  children: React.ReactNode;
-}
 
 export const Home = () => {
   let cardCounter = 0;

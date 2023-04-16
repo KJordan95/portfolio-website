@@ -1,6 +1,14 @@
 import React, { useCallback, useRef } from "react";
 import { useInView } from "react-intersection-observer";
-import { ImageSectionInterface } from "./home";
+
+interface ImageSectionInterface {
+  altAttributeVale: string;
+  imgSrc: string;
+  title: string;
+  inlineStyle?: React.CSSProperties;
+  description?: string;
+  order: number;
+}
 
 export const ImageSection = (props: ImageSectionInterface) => {
   const containRef = useRef();

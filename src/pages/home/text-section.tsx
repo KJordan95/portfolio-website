@@ -1,6 +1,10 @@
 import { useCallback, useRef } from "react";
 import { useInView } from "react-intersection-observer";
-import { TextSectionInterface } from "./home";
+
+ interface TextSectionInterface {
+  title: string;
+  body: string;
+}
 
 export const TextSection = (props: TextSectionInterface) => {
   const containRef = useRef();
