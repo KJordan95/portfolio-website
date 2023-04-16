@@ -31,7 +31,7 @@ export const ExperienceSection = () => {
     <section className="hidden experience-section" ref={setRefs}>
       <h2>Work Experience</h2>
       <div className="experiences">
-        <div className="company" role="tablist">
+        <div className="company">
           <TabNavItem
             id={"company1"}
             title={"Company1"}

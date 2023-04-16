@@ -65,6 +65,7 @@ section {
   display: grid;
   place-items: center;
   align-content: center;
+  margin: 0px auto;
   min-height: 40vh;
 }
 
@@ -133,7 +134,7 @@ iframe {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   .navbar {
     display: grid;
   }
@@ -149,6 +150,10 @@ iframe {
 
   .logos {
     flex-direction: column;
+  }
+
+  section {
+    min-height: 20vh;
   }
 
   section.logo {
