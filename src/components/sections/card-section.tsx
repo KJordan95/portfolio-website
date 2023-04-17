@@ -32,6 +32,10 @@ export const CardSection = (props: ImageSectionInterface) => {
             <div className="info-card-back">
               <h1>{props.title}</h1>
               <p>{props.description}</p>
+              <div className="card-chip-container">
+                {/* <div className="chip">JavaScript</div> */}
+                {props.children}
+              </div>
             </div>
           </div>
         </div>
