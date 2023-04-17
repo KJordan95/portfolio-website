@@ -1,14 +1,31 @@
 import React, { useState } from "react";
-import { ImageSectionInterface } from "@/components/sections/image-section";
 import { IntersectionObserverReference } from "./intersection-observer-reference";
 
-export const CardSection = (props: ImageSectionInterface) => {
+interface CardSectionInterface {
+  altAttributeVale: string;
+  imgSrc: string;
+  title: string;
+  inlineStyle?: React.CSSProperties;
+  description?: string;
+  order: number;
+  children?: React.ReactNode;
+  GithubLink?: string;
+  LiveDemoLink?: string;
+}
+
+export const CardSection = (props: CardSectionInterface) => {
   const [flip, setFlip] = useState(false);
 
   const containRef = IntersectionObserverReference(0.75);
 
   const flipCard = (event: React.MouseEvent<HTMLElement>) => {
     setFlip(!flip);
+  };
+
+  const handleExternalLinkClick = (
+    event: React.MouseEvent<HTMLAnchorElement, MouseEvent>
+  ) => {
+    event.stopPropagation();
   };
 
   return (
@@ -31,7 +48,29 @@ export const CardSection = (props: ImageSectionInterface) => {
             </div>
             <div className="info-card-back">
               <h1>{props.title}</h1>
+              <div className="card-link-container">
+                {props.GithubLink !== undefined ? (
+                  <a
+                    href={props.GithubLink}
+                    target="_blank"
+                    onClick={handleExternalLinkClick}
+                  >
+                    GitHub
+                  </a>
+                ) : null}
+
+                {props.LiveDemoLink !== undefined ? (
+                  <a
+                    href={props.LiveDemoLink}
+                    target="_blank"
+                    onClick={handleExternalLinkClick}
+                  >
+                    Live Demo
+                  </a>
+                ) : null}
+              </div>
               <p>{props.description}</p>
+              <div className="card-chip-container">{props.children}</div>
             </div>
           </div>
         </div>

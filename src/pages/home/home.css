@@ -47,6 +47,8 @@
   color: white;
   transform: rotateY(180deg);
   overflow-y: auto;
+  display: grid;
+  position: relative;
 }
 
 /* scroll bar for info cards description, not supported in firefox or edge prior 97*/
@@ -64,6 +66,46 @@
 
 .info-card-back::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+.info-card-back::after {
+  background-color: white;
+}
+
+.card-link-container {
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+}
+
+.card-link-container a {
+  position: sticky;
+  bottom: 0;
+  padding: 0 0.5rem;
+  text-align: center;
+  border-radius: 20px;
+  margin: 0 0.25rem;
+  background-color: darkblue;
+  color: white;
+}
+
+.card-link-container a:hover {
+  background-color: rgb(75, 75, 223);
+}
+
+.card-chip-container {
+  position: sticky;
+  bottom: 0;
+  background-color: whitesmoke;
+  width: 100%;
+  align-self: flex-end;
+}
+
+.chip {
+  display: inline-block;
+  padding: 0 0.5rem;
+  background-color: blue;
+  border-radius: 20px;
 }
 
 .company {
@@ -111,8 +153,6 @@
 .experience-description {
   width: 100%;
   height: auto;
-  /* overflow-wrap: break-word; */
-  /* word-break: break-all; */
 }
 
 .work-details {

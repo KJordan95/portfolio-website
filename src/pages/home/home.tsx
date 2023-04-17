@@ -31,7 +31,11 @@ export const Home = () => {
             inlineStyle={{ backgroundColor: "rgb(240, 220, 78)" }}
             description={JavaScriptDescription}
             order={cardCounter++}
-          />
+            GithubLink="https://github.com/KJordan95/peggle-like-game"
+            // LiveDemoLink={}
+          >
+            <div className="chip">JavaScript</div>
+          </CardSection>
           <CardSection
             imgSrc={CppLogo}
             altAttributeVale="C plus plus Card"
@@ -39,7 +43,9 @@ export const Home = () => {
             inlineStyle={{ backgroundColor: "rgb(26, 70, 116)" }}
             description={CppDescription}
             order={cardCounter++}
-          />
+          >
+            <div className="chip">C++</div>
+          </CardSection>
         </div>
       </section>
 
