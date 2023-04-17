@@ -11,6 +11,12 @@ export const CardSection = (props: ImageSectionInterface) => {
     setFlip(!flip);
   };
 
+  const handleExternalLinkClick = (
+    event: React.MouseEvent<HTMLAnchorElement, MouseEvent>
+  ) => {
+    event.stopPropagation();
+  };
+
   return (
     <>
       <section>
@@ -31,6 +37,17 @@ export const CardSection = (props: ImageSectionInterface) => {
             </div>
             <div className="info-card-back">
               <h1>{props.title}</h1>
+              <div className="card-link-container">
+                {/*TODO: add state for has github link and has live demo */}
+                <a
+                  href="https://github.com/KJordan95/peggle-like-game"
+                  target="_blank"
+                  onClick={handleExternalLinkClick}
+                >
+                  GitHub
+                </a>
+                <button>Live Demo</button>
+              </div>
               <p>{props.description}</p>
               <div className="card-chip-container">
                 {/* <div className="chip">JavaScript</div> */}

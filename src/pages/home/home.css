@@ -70,6 +70,27 @@
   background-color: white;
 }
 
+.card-link-container {
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+}
+
+.card-link-container a {
+  position: sticky;
+  bottom: 0;
+  padding: 0 0.5rem;
+  text-align: center;
+  border-radius: 20px;
+  margin: 0 0.25rem;
+  background-color: darkblue;
+  color: white;
+}
+
+.card-link-container a:hover {
+  background-color: rgb(75, 75, 223);
+}
+
 .card-chip-container {
   position: sticky;
   bottom: 0;
@@ -82,11 +103,6 @@
   padding: 0 0.5rem;
   background-color: blue;
   border-radius: 20px;
-  /* height: 50px; */
-  /* font-size: 16px; */
-  /* line-height: 50px; */
-  /* border-radius: 25px; */
-  /* background-color: #f1f1f1; */
 }
 
 .company {
