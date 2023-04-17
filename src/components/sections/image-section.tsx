@@ -8,7 +8,6 @@ export interface ImageSectionInterface {
   inlineStyle?: React.CSSProperties;
   description?: string;
   order: number;
-  children?: React.ReactNode;
 }
 
 export const ImageSection = (props: ImageSectionInterface) => {
