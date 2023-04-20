@@ -121,6 +121,37 @@ iframe {
   width: 50vw;
 }
 
+.contact-form-container {
+  display: grid;
+  align-items: center;
+  margin: 5rem auto;
+}
+
+.contact-form {
+  display: grid;
+  align-items: center;
+  width: 50vw;
+  margin: auto;
+}
+
+.success-msg,
+.error-msg {
+  margin: 1rem 0;
+  padding: 0.5rem;
+  border-radius: 3px 3px 3px 3px;
+  width: 90vw;
+}
+
+.success-msg {
+  color: rgb(34, 119, 0);
+  background-color: rgb(223, 242, 191);
+}
+
+.error-msg {
+  color: rgb(216, 0, 12);
+  background-color: rgb(255, 186, 186);
+}
+
 @media (prefers-color-scheme: light) {
   html {
     background-color: aliceblue;
