@@ -101,6 +101,120 @@ section {
   transform: translateX(0);
 }
 
+.projects-header {
+  margin-top: 5rem;
+}
+
+.projects-subheader {
+  margin: 0 0 0.5rem 0;
+}
+
+.infocards {
+  display: flex;
+  flex-wrap: wrap;
+  place-items: center;
+  align-content: center;
+}
+
+.info-card {
+  background-color: transparent;
+  width: 30vw;
+  height: 50vh;
+  margin: 0 0.25rem;
+  border: 1px solid white;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.info-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: 0.8s;
+  transform-origin: center right;
+  transform-style: preserve-3d;
+}
+
+.info-card-inner.flip {
+  transform: translateX(-100%) rotateY(-180deg);
+}
+
+.info-card-front,
+.info-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.info-card-back {
+  background-color: var(--accent-color);
+  color: white;
+  transform: rotateY(180deg);
+  overflow-y: auto;
+  display: grid;
+  position: relative;
+}
+
+/* scroll bar for info cards description, not supported in firefox or edge prior 97*/
+.info-card-back::-webkit-scrollbar {
+  width: 10px;
+}
+
+.info-card-back::-webkit-scrollbar-track {
+  background: #dbdbdb;
+}
+
+.info-card-back::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+.info-card-back::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.info-card-back::after {
+  background-color: white;
+}
+
+.card-link-container {
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+}
+
+.card-link-container a {
+  position: sticky;
+  bottom: 0;
+  padding: 0 0.5rem;
+  text-align: center;
+  border-radius: 20px;
+  margin: 0 0.25rem;
+  background-color: darkblue;
+  color: white;
+}
+
+.card-link-container a:hover {
+  background-color: rgb(75, 75, 223);
+}
+
+.card-chip-container {
+  position: sticky;
+  bottom: 0;
+  background-color: whitesmoke;
+  width: 100%;
+  align-self: flex-end;
+}
+
+.chip {
+  display: inline-block;
+  padding: 0 0.5rem;
+  background-color: blue;
+  border-radius: 20px;
+}
+
 section.pdfViewer {
   min-height: 50vh;
 }
@@ -176,6 +290,10 @@ iframe {
   .navbar.sticky {
     border-bottom: 1px solid black;
   }
+
+  .info-card {
+    border: 1px solid black;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -214,6 +332,14 @@ iframe {
 
   section.logo {
     min-height: 30vh;
+  }
+
+  .infocards {
+    display: grid;
+  }
+  .info-card {
+    width: 80vw;
+    margin: 0.25rem;
   }
 
   iframe {
