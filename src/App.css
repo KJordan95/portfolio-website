@@ -127,6 +127,18 @@ iframe {
   margin: 5rem auto;
 }
 
+.contact-external-links-container {
+  display: flex;
+  align-items: center;
+  place-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.contact-email-logo {
+  cursor: pointer;
+}
+
 .contact-form {
   display: grid;
   align-items: center;

@@ -1,8 +1,12 @@
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import GitHubLogo from "@/assets/img/GitHub-logo.png";
+import LinkedInLogo from "@/assets/img/LinkedIn-logo.png";
+import EmailLogo from "@/assets/img/Email-logo.png";
 
 export const Contact = () => {
   const [emailStatus, setEmailStatus] = useState("");
+  const [copiedEmail, setCopyEmail] = useState("0px");
   const form = useRef<any>();
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
@@ -31,6 +35,16 @@ export const Contact = () => {
     event.currentTarget.style.height = `${event.currentTarget.scrollHeight}px`;
   };
 
+  const copyToClipBoard = (event: React.MouseEvent) => {
+    navigator.clipboard.writeText("kameronjordan95@gmail.com");
+    setCopyEmail("auto");
+    console.log(copiedEmail);
+    setTimeout(() => {
+      console.log(copiedEmail);
+      setCopyEmail("0px");
+    }, 7000);
+  };
+
   return (
     <section>
       <div className="contact-form-container">
@@ -43,8 +57,45 @@ export const Contact = () => {
             another email provider.
           </div>
         )}
+        <div
+          className="success-msg"
+          style={{ height: copiedEmail, padding: "0rem", overflow: "hidden" }}
+        >
+          Email copied to clipboard!
+        </div>
+
+        <div>kameronjordan95@gmail.com</div>
 
         {/*TODO: add links to linkedin github and put email in plain text*/}
+        <div className="contact-external-links-container">
+          <a href="https://github.com/KJordan95" target="_blank">
+            <img
+              src={GitHubLogo}
+              alt="GitHub Link"
+              title="GitHub"
+              width="50"
+              height="50"
+            />
+          </a>
+          <a href="https://www.linkedin.com/in/kameronjordan/" target="_blank">
+            <img
+              src={LinkedInLogo}
+              alt="Linked In Link"
+              title="LinkedIn"
+              width="75"
+              height="75"
+            />
+          </a>
+          <img
+            className="contact-email-logo"
+            src={EmailLogo}
+            alt="Copy Email to Clipboard"
+            title="Copy Email Address"
+            width="65"
+            height="70"
+            onClick={copyToClipBoard}
+          />
+        </div>
 
         <form className="contact-form" ref={form} onSubmit={sendEmail}>
           <label>Name</label>
