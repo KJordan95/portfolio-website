@@ -113,8 +113,13 @@ export const Contact = () => {
             required
           />
           <label>Message</label>
-          <textarea name="message" onInput={resizeMessageBox} />
-          <input type="submit" value="Send" required />
+          <textarea
+            name="message"
+            onInput={resizeMessageBox}
+            placeholder="Your Message..."
+            required
+          />
+          <input type="submit" value="Send" />
         </form>
       </div>
     </section>
