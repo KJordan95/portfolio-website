@@ -99,12 +99,22 @@ export const Contact = () => {
 
         <form className="contact-form" ref={form} onSubmit={sendEmail}>
           <label>Name</label>
-          <input type="text" name="to_name" required />
+          <input
+            type="text"
+            name="to_name"
+            placeholder="Your Name..."
+            required
+          />
           <label>Email</label>
-          <input type="email" name="from_name" required />
+          <input
+            type="email"
+            name="from_name"
+            placeholder="Your Email..."
+            required
+          />
           <label>Message</label>
           <textarea name="message" onInput={resizeMessageBox} />
-          <input type="submit" value="Send" />
+          <input type="submit" value="Send" required />
         </form>
       </div>
     </section>

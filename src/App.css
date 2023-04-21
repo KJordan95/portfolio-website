@@ -178,6 +178,12 @@ iframe {
   }
 }
 
+@media (prefers-color-scheme: dark) {
+  .contact-external-links-container {
+    filter: invert(1);
+  }
+}
+
 @media (prefers-reduced-motion) {
   .hidden {
     transition: none;
