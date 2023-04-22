@@ -1,11 +1,10 @@
 import { CardSection } from "@/components/sections/card-section";
 import CppLogo from "@/assets/img/Cpp-logo.svg";
-import JSLogo from "@/assets/img/JavaScript-logo.png";
-import JavaLogo from "@/assets/img/Java-logo.png";
+import TextEditorPicture from "@/assets/img/SpellChecker.gif";
 import {
-  JavaScriptDescription,
-  CppDescription,
-} from "@/assets/text/language-desrciptions";
+  PortfolioWebSiteDescription,
+  TextEditorDescription,
+} from "@/assets/text/project-desrciptions";
 
 export const Projects = () => {
   let cardCounter = 0;
@@ -14,31 +13,36 @@ export const Projects = () => {
     <section>
       <h1 className="projects-header">Notable Side Projects</h1>
       <h4 className="projects-subheader">
-        Click each card to learn more about them!
+        Click each project to learn more about them!
       </h4>
 
       <div className="infocards">
         <CardSection
-          imgSrc={JSLogo}
-          altAttributeVale="JavaScript Card"
-          title="JavaScript"
+          imgSrc={CppLogo}
+          altAttributeVale="Portfolio Website Project"
+          title="This Portfolio Website"
           inlineStyle={{ backgroundColor: "rgb(240, 220, 78)" }}
-          description={JavaScriptDescription}
+          description={PortfolioWebSiteDescription}
           order={cardCounter++}
-          GithubLink="https://github.com/KJordan95/peggle-like-game"
+          GithubLink="https://github.com/KJordan95/portfolio-website"
           // LiveDemoLink={}
         >
-          <div className="chip">JavaScript</div>
+          <div className="chip">TypeScript</div>
+          <div className="chip">ReactJS</div>
+          <div className="chip">NodeJS</div>
+          <div className="chip">Vite</div>
         </CardSection>
         <CardSection
-          imgSrc={CppLogo}
-          altAttributeVale="C plus plus Card"
-          title="C++"
+          imgSrc={TextEditorPicture}
+          altAttributeVale="Text Editor Project"
+          title="Text Editor in JavaFX"
           inlineStyle={{ backgroundColor: "rgb(26, 70, 116)" }}
-          description={CppDescription}
+          description={TextEditorDescription}
           order={cardCounter++}
+          GithubLink="https://github.com/KJordan95/TextEditor_JavaFX"
         >
-          <div className="chip">C++</div>
+          <div className="chip">Java</div>
+          <div className="chip">JavaFX</div>
         </CardSection>
       </div>
     </section>

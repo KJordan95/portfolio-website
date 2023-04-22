@@ -120,7 +120,7 @@ section {
   background-color: transparent;
   width: 30vw;
   height: 50vh;
-  margin: 0 0.25rem;
+  margin: 0.25rem;
   border: 1px solid white;
   perspective: 1000px;
   cursor: pointer;
@@ -200,6 +200,10 @@ section {
   background-color: rgb(75, 75, 223);
 }
 
+.card-description {
+  margin: 0px 1rem;
+}
+
 .card-chip-container {
   position: sticky;
   bottom: 0;
@@ -213,6 +217,7 @@ section {
   padding: 0 0.5rem;
   background-color: blue;
   border-radius: 20px;
+  margin: 0.1rem;
 }
 
 section.pdfViewer {
@@ -338,8 +343,8 @@ iframe {
     display: grid;
   }
   .info-card {
+    height: 35vh;
     width: 80vw;
-    margin: 0.25rem;
   }
 
   iframe {

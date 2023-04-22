@@ -37,14 +37,16 @@ export const CardSection = (props: CardSectionInterface) => {
             style={props.inlineStyle}
           >
             <div className="info-card-front">
-              <section className="icon">
-                <img
-                  src={props.imgSrc}
-                  alt={props.altAttributeVale}
-                  width="50vh"
-                  height="50vh"
-                />
-              </section>
+              {/* <section className="icon"> */}
+              <img
+                src={props.imgSrc}
+                alt={props.altAttributeVale}
+                // width="50vh"
+                // height="50vh"
+                width="100%"
+                height="100%"
+              />
+              {/* </section> */}
             </div>
             <div className="info-card-back">
               <h1>{props.title}</h1>
@@ -69,7 +71,7 @@ export const CardSection = (props: CardSectionInterface) => {
                   </a>
                 ) : null}
               </div>
-              <p>{props.description}</p>
+              <p className="card-description">{props.description}</p>
               <div className="card-chip-container">{props.children}</div>
             </div>
           </div>
