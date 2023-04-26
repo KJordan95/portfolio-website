@@ -341,8 +341,12 @@ iframe {
     flex-direction: column;
   }
 
+  .logo-title {
+    margin-top: 0;
+  }
+
   section.logo {
-    min-height: 30vh;
+    min-height: 20vh;
   }
 
   .infocards {
