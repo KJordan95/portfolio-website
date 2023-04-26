@@ -3,6 +3,7 @@
 :root {
   color-scheme: light dark;
   accent-color: slateblue;
+  --secondary-accent-color: rgb(72, 58, 167);
 }
 
 .App {
@@ -61,7 +62,7 @@ a {
 .links a {
   color: white;
   text-decoration: none;
-  border-bottom: 3px solid white;
+  border-bottom: 3px solid var(--accent-color);
   margin: 10px;
 }
 
@@ -80,6 +81,11 @@ section {
 
 .show {
   opacity: 1;
+}
+
+.logo-title {
+  color: var(--secondary-accent-color);
+  margin-top: 15rem;
 }
 
 .logos {

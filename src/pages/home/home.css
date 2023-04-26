@@ -1,10 +1,41 @@
 :root {
   --accent-color: slateblue;
+  --secondary-accent-color: rgb(72, 58, 167);
+}
+
+.home-intro-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.home-intro-text {
+  text-align: left;
+  margin: 10rem 1rem 1rem auto;
+}
+
+.home-intoduction {
+  color: var(--accent-color);
+  margin: 0;
+}
+
+.home-name {
+  font-size: 3rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.home-profile-pic {
+  height: 20%;
+  width: 20%;
+  margin: 10rem auto 1rem 1rem;
+  border-radius: 10px;
+  filter: drop-shadow(30px 10px var(--accent-color));
 }
 
 .company {
   position: relative;
-  width: 150px;
+  width: 11rem;
   max-width: 15rem;
   overflow-y: auto;
 }
@@ -22,6 +53,10 @@
   font-size: 1rem;
 }
 
+.company-button:hover {
+  background-color: rgba(128, 128, 128, 0.1);
+}
+
 .company-button[aria-selected="true"] {
   border-left-color: var(--accent-color);
 }
@@ -35,6 +70,8 @@
 
 .experiences {
   display: flex;
+  margin: 1rem;
+  min-height: 350px;
 }
 
 .experience-container {
@@ -68,10 +105,21 @@
 }
 
 .work-details-date-range {
-  color: rgb(67, 51, 176);
+  color: var(--secondary-accent-color);
 }
 
 @media (max-width: 700px) {
+  .home-intro-text {
+    text-align: left;
+    margin-left: 1rem;
+  }
+
+  .home-profile-pic {
+    height: 50%;
+    width: 50%;
+    margin: 1rem auto;
+  }
+
   .company {
     display: flex;
     overflow-x: auto;
@@ -94,6 +142,7 @@
     align-content: center;
     place-items: center;
     padding: 0px 10px;
+    min-height: 0px;
   }
 
   .experience-container {
