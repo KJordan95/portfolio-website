@@ -19,7 +19,12 @@ export const NavBar = () => {
       <div className="links">
         <Link to="/">Home</Link>
         <Link to="/projects">Projects</Link>
-        <Link to="/resume">Resume</Link>
+        <a
+          href="https://drive.google.com/file/d/1kj6YSn3mUeUHQAbJe9HT0kcMoXCwWZ6R/view?usp=sharing"
+          target="_blank"
+        >
+          Resume
+        </a>
         <Link to="/contact">Contact</Link>
       </div>
     </div>

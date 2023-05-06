@@ -25,8 +25,6 @@ export const ImageSection = (props: ImageSectionInterface) => {
           src={props.imgSrc}
           alt={props.altAttributeVale}
           title={props.title}
-          // width="100"
-          // height="100"
         />
         {props.title}
       </section>
