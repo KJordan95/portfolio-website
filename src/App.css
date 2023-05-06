@@ -85,7 +85,7 @@ section {
 
 .logo-title {
   color: var(--secondary-accent-color);
-  margin-top: 15rem;
+  margin-top: 5rem;
 }
 
 .logos {
@@ -105,6 +105,12 @@ section {
 
 .logo.show {
   transform: translateX(0);
+}
+
+.logo-image {
+  height: 100px;
+  width: auto;
+  max-width: 125px;
 }
 
 .projects-header {
