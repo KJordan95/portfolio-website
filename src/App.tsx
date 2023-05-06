@@ -7,7 +7,6 @@ import {
 import { NavBar } from "./components/navbar";
 import { Home } from "./pages/home/home";
 import "./App.css";
-import { Resume } from "./pages/resume";
 import { Contact } from "./pages/contact";
 import { Projects } from "./pages/projects";
 
@@ -19,7 +18,6 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
-          <Route path="/resume" element={<Resume />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>

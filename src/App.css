@@ -3,6 +3,7 @@
 :root {
   color-scheme: light dark;
   accent-color: slateblue;
+  --secondary-accent-color: rgb(72, 58, 167);
 }
 
 .App {
@@ -13,6 +14,11 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
+  background-image: linear-gradient(
+    rgba(255, 0, 0, 0),
+    rgba(72, 58, 167, 0.25)
+  );
+  background-attachment: fixed;
 }
 
 button {
@@ -61,7 +67,7 @@ a {
 .links a {
   color: white;
   text-decoration: none;
-  border-bottom: 3px solid white;
+  border-bottom: 3px solid var(--accent-color);
   margin: 10px;
 }
 
@@ -82,6 +88,11 @@ section {
   opacity: 1;
 }
 
+.logo-title {
+  color: var(--secondary-accent-color);
+  margin-top: 5rem;
+}
+
 .logos {
   display: flex;
   flex-wrap: wrap;
@@ -99,6 +110,12 @@ section {
 
 .logo.show {
   transform: translateX(0);
+}
+
+.logo-image {
+  height: 100px;
+  width: auto;
+  max-width: 125px;
 }
 
 .projects-header {
@@ -335,8 +352,12 @@ iframe {
     flex-direction: column;
   }
 
+  .logo-title {
+    margin-top: 0;
+  }
+
   section.logo {
-    min-height: 30vh;
+    min-height: 20vh;
   }
 
   .infocards {

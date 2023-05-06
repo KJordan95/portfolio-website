@@ -1,5 +1,5 @@
 import { CardSection } from "@/components/sections/card-section";
-import CppLogo from "@/assets/img/Cpp-logo.svg";
+import HomePageScreenshot from "@/assets/img/PortfolioHomePage.png";
 import TextEditorPicture from "@/assets/img/SpellChecker.gif";
 import {
   PortfolioWebSiteDescription,
@@ -18,7 +18,7 @@ export const Projects = () => {
 
       <div className="infocards">
         <CardSection
-          imgSrc={CppLogo}
+          imgSrc={HomePageScreenshot}
           altAttributeVale="Portfolio Website Project"
           title="This Portfolio Website"
           inlineStyle={{ backgroundColor: "rgb(240, 220, 78)" }}
